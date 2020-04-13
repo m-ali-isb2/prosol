@@ -1,0 +1,60 @@
+public class MyFragmentManager {
+
+    FragmentManager fragmentManager;
+    FragmentTransaction fragmentTransaction;
+
+    public MyFragmentManager() {
+
+    }
+
+    @NonNull
+    public static MyFragmentManager getInstance(FragmentManager appCompatActivity) {
+        return new MyFragmentManager(appCompatActivity);
+    }
+
+    private MyFragmentManager(FragmentManager fm) {
+        fragmentManager = fm;
+//        fragmentTransaction = fragmentManager.beginTransaction();
+    }
+
+    public void setFragmentManager(FragmentManager fragmentManager) {
+        this.fragmentManager = fragmentManager;
+    }
+
+    public void setFragmentTransaction(FragmentTransaction fragmentTransaction) {
+        this.fragmentTransaction = fragmentTransaction;
+    }
+
+    public FragmentTransaction getFragmentTransaction() {
+        return fragmentTransaction;
+    }
+
+//    public void setDeliveryHomeFragment() {
+//        try {
+//            fragmentDelivery = new DeliveryHome(Constants.DELIVERY_FRAGMENT_TAG);
+//            fragmentDelivery.setBaseActivity((HomeMainActivity) activity);
+//            if (!fragmentDelivery.isAdded()) {
+//                re_init();
+//                fragmentTransaction.replace(R.id.base_frameLayout, fragmentDelivery, Constants.DELIVERY_FRAGMENT_TAG);
+//                fragmentTransaction.addToBackStack(Constants.LAUNDRY_FRAGMENT_TAG);
+//                ((HomeMainActivity) activity).setTitle(Constants.DELIVERY_FRAGMENT_TAG);
+//                fragmentTransaction.commit();
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+
+//    public void setHomeFragment() {
+//        try {
+//            fragmentHome = new HomeMenuFragment();
+//            if (!fragmentHome.isAdded()) {
+//                fragmentTransaction.replace(R.id.base_frameLayout, fragmentHome, Constants.HOME_FRAGMENT_TAG);
+//                fragmentTransaction.commit();
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+
+}
